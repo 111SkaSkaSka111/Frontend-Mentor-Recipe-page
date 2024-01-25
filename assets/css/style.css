@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Young+Serif&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Young+Serif&display=swap");
+
+:root {
+    --young-serif: "Young Serif", serif;
+    --outfit: "Outfit", sans-serif;
+    --h2bold: 700;
+    --Nutmeg: rgb(133, 70, 50);
+    --Dark-Raspberry: rgb(123, 40, 79);
+    --White: rgb(255, 255, 255);
+    --Rose-White: rgb(255, 245, 250);
+    --Eggshell: rgb(243, 230, 216);
+    --Light-Grey: rgb(228, 222, 216);
+    --Wenge-Brown: rgb(95, 87, 78);
+    --Dark-Charcoal: rgb(48, 45, 44);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--Eggshell);
+}
+
+.container {
+    width: 800px;
+    background-color: var(--White);
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.container .content hr {
+    margin-top: 20px;
+}
+
+.container .heading img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.container .content h1 {
+    font-family: var(--young-serif);
+    font-weight: 400;
+    margin: 10px 0;
+}
+
+.container .content p {
+    font-family: var(--outfit);
+    font-weight: 400;
+    color: var(--Wenge-Brown);
+    margin: 10px 0;
+}
+
+.container .content h2 {
+    color: var(--Nutmeg);
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+.preparation {
+    background-color: rgba(123, 40, 79, 0.2);
+    padding: 20px;
+    border-radius: 15px;
+    color: var(--Wenge-Brown);
+}
+
+.preparation h3 {
+    color: var(--Dark-Raspberry);
+    padding-bottom: 10px;
+}
+
+.container .content ul {
+    padding-left: 20px;
+    font-size: 0.9rem;
+}
+
+.container .content ul li {
+    color: var(--Dark-Raspberry);
+    margin: 5px 0;
+}
+
+.preparation ul li p {
+    color: var(--Wenge-Brown);
+}
+
+.content ul li p span {
+    color: var(--Dark-Charcoal);
+    font-weight: 600;
+}
+
+.container .content ul li p {
+    margin-left: 10px;
+}
+
+.instruction ul li {
+    list-style-type: decimal;
+    font-weight: bold;
+}
+
+.Nutrition .tabel {
+    margin-top: 30px;
+}
+
+.Nutrition .tabel ul {
+    width: 100%;
+}
+
+.Nutrition .tabel ul li {
+    list-style: none;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.Nutrition .tabel ul .garis::before {
+    content: "";
+    position: absolute;
+    left: -20px;
+    right: 0;
+    height: 1px;
+    bottom: -10px;
+    background-color: #ddd;
+}
+
+.Nutrition .tabel ul li p {
+    display: flex;
+}
+
+.Nutrition .tabel ul li p span:first-child {
+    color: var(--Wenge-Brown);
+}
+
+.Nutrition .tabel ul li p span {
+    display: flex;
+    width: 50%;
+    color: var(--Nutmeg);
+}
+
+@media (max-width: 800px) {
+    * {
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+    }
+
+    body {
+        background-color: #fff;
+    }
+
+    .container {
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+        padding: 0;
+    }
+
+    .container .heading img {
+        border-radius: 0;
+        width: 100%;
+    }
+
+    .container .content {
+        margin: 20px;
+    }
+}
