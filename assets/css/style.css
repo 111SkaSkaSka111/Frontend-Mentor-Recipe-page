@@ -26,11 +26,43 @@ body {
     background-color: var(--Eggshell);
 }
 
+.box {
+    margin: 50px auto;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.box::before {
+    content: "";
+    position: absolute;
+    background: linear-gradient(to top right, aqua, aquamarine, blue, purple);
+    width: 80%;
+    height: 130%;
+    z-index: -1;
+    animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 .container {
     width: 800px;
     background-color: var(--White);
-    margin: 50px auto;
     padding: 20px;
+    margin: 10px;
     border-radius: 15px;
 }
 
@@ -149,6 +181,12 @@ body {
 
     body {
         background-color: #fff;
+    }
+
+    .box {
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
     }
 
     .container {
