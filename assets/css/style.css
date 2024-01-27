@@ -45,12 +45,16 @@ body {
     width: 80%;
     height: 130%;
     z-index: -1;
+    transform: rotate(25deg);
+}
+
+.box:hover::before {
     animation: rotate 3s linear infinite;
 }
 
 @keyframes rotate {
     0% {
-        transform: rotate(0deg);
+        transform: rotate(25deg);
     }
 
     100% {
