@@ -6,14 +6,32 @@
     --young-serif: "Young Serif", serif;
     --outfit: "Outfit", sans-serif;
     --h2bold: 700;
-    --Nutmeg: rgb(133, 70, 50);
-    --Dark-Raspberry: rgb(123, 40, 79);
-    --White: rgb(255, 255, 255);
-    --Rose-White: rgb(255, 245, 250);
-    --Eggshell: rgb(243, 230, 216);
-    --Light-Grey: rgb(228, 222, 216);
-    --Wenge-Brown: rgb(95, 87, 78);
-    --Dark-Charcoal: rgb(48, 45, 44);
+    --bg-clr-fourth: #fff5fa;
+    --Light-Grey: #e4ded8;
+    --bg-clr-primary: #ffffff;
+    --bg-clr-secondary: #f3e6d8;
+    --bg-clr-third: #7b284f33;
+    --txt-clr-primary: #000;
+    --txt-clr-secondary: #5f574e;
+    --txt-clr-third: #854632;
+    --txt-clr-fourth: #7b284f;
+    --txt-clr-fiveth: #302d2c;
+}
+
+.darkmode {
+    --young-serif: "Young Serif", serif;
+    --outfit: "Outfit", sans-serif;
+    --h2bold: 700;
+    --bg-clr-fourth: #fff5fa;
+    --Light-Grey: #e4ded8;
+    --bg-clr-primary: #1d1b19;
+    --bg-clr-secondary: #0a2412;
+    --bg-clr-third: #ff007733;
+    --txt-clr-primary: #fff;
+    --txt-clr-secondary: #e9b67c;
+    --txt-clr-third: #e79982;
+    --txt-clr-fourth: #ff077b;
+    --txt-clr-fiveth: #ad9e99;
 }
 
 * {
@@ -23,7 +41,7 @@
 }
 
 body {
-    background-color: var(--Eggshell);
+    background-color: var(--bg-clr-primary);
 }
 
 .box {
@@ -64,10 +82,42 @@ body {
 
 .container {
     width: 800px;
-    background-color: var(--White);
+    background-color: var(--bg-clr-secondary);
     padding: 20px;
     margin: 10px;
     border-radius: 15px;
+}
+
+.content {
+    position: relative;
+}
+
+.content #toggle-darkmode {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.content #toggle-darkmode img {
+    transition: transform 0.5s ease-in-out;
+}
+
+.content #toggle-darkmode .sun {
+    background-color: #5f574e;
+}
+
+.content #toggle-darkmode .moon {
+    background-color: #000;
+    padding: 0 0 1.5px 0;
+}
+
+.content #toggle-darkmode.active img {
+    transform: translateY(-110%);
 }
 
 .container .content hr {
@@ -80,33 +130,34 @@ body {
 }
 
 .container .content h1 {
-    font-family: var(--young-serif);
     font-weight: 400;
     margin: 10px 0;
+    font-family: var(--young-serif);
+    color: var(--txt-clr-primary);
 }
 
 .container .content p {
     font-family: var(--outfit);
     font-weight: 400;
-    color: var(--Wenge-Brown);
+    color: var(--txt-clr-secondary);
     margin: 10px 0;
 }
 
 .container .content h2 {
-    color: var(--Nutmeg);
+    color: var(--txt-clr-third);
     font-weight: 700;
     margin: 20px 0;
 }
 
 .preparation {
-    background-color: rgba(123, 40, 79, 0.2);
+    background-color: var(--bg-clr-third);
     padding: 20px;
     border-radius: 15px;
-    color: var(--Wenge-Brown);
+    color: var(--txt-clr-secondary);
 }
 
 .preparation h3 {
-    color: var(--Dark-Raspberry);
+    color: var(--txt-clr-fourth);
     padding-bottom: 10px;
 }
 
@@ -116,16 +167,16 @@ body {
 }
 
 .container .content ul li {
-    color: var(--Dark-Raspberry);
+    color: var(--txt-clr-fourth);
     margin: 5px 0;
 }
 
 .preparation ul li p {
-    color: var(--Wenge-Brown);
+    color: var(--txt-clr-secondary);
 }
 
 .content ul li p span {
-    color: var(--Dark-Charcoal);
+    color: var(--txt-clr-fiveth);
     font-weight: 600;
 }
 
@@ -159,7 +210,7 @@ body {
     right: 0;
     height: 1px;
     bottom: -10px;
-    background-color: #ddd;
+    background-color: var(--bg-clr-fourth);
 }
 
 .Nutrition .tabel ul li p {
@@ -167,13 +218,13 @@ body {
 }
 
 .Nutrition .tabel ul li p span:first-child {
-    color: var(--Wenge-Brown);
+    color: var(--txt-clr-secondary);
 }
 
 .Nutrition .tabel ul li p span {
     display: flex;
     width: 50%;
-    color: var(--Nutmeg);
+    color: var(--txt-clr-third);
 }
 
 @media (max-width: 800px) {
@@ -184,7 +235,7 @@ body {
     }
 
     body {
-        background-color: #fff;
+        background-color: var(--bg-clr-primary);
     }
 
     .box {
@@ -207,5 +258,10 @@ body {
 
     .container .content {
         margin: 20px;
+    }
+
+    .content #toggle-darkmode {
+        top: -20px;
+        right: -15px;
     }
 }
